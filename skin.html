@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{=title}</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- 배경 데코레이션 -->
+    <div class="retro-background">
+        <div class="retro-stars"></div>
+    </div>
+
+    <!-- 미니홈피 컨테이너 -->
+    <div class="minihome-container">
+        <!-- 사이드바 -->
+        <aside class="minihome-sidebar">
+            <div class="profile-section">
+                <div class="profile-frame">
+                    <img src="images/profile.png" alt="프로필 이미지" class="profile-img">
+                </div>
+                <h2 class="profile-name">{=blog_name}</h2>
+                <p class="profile-status">⭐ kkk ⭐</p>
+                <div class="today-counter">
+                    <span>TODAY <strong>{=today_count}</strong></span>
+                    <span>TOTAL <strong>{=total_count}</strong></span>
+                </div>
+            </div>
+            
+            <nav class="minihome-menu">
+                <a href="/" class="menu-item">
+                    <img src="images/home.png" alt="홈 아이콘">
+                    <span>홈</span>
+                </a>
+                <a href="/category" class="menu-item">
+                    <img src="images/diary.png" alt="다이어리 아이콘">
+                    <span>다이어리</span>
+                </a>
+                <a href="/guestbook" class="menu-item">
+                    <img src="images/guestbook.png" alt="방명록 아이콘">
+                    <span>방명록</span>
+                </a>
+            </nav>
+
+            <!-- 미니룸 섹션 추가 -->
+            <div class="miniroom">
+                <h3>Mini Room</h3>
+                <div class="miniroom-frame">
+                    <!-- <img src="images/miniroom.png" alt="미니룸"> -->
+                </div>
+            </div>
+        </aside>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="minihome-content">
+            <div class="content-header">
+                <h1 class="post-title">{=title}</h1>
+                <p class="post-date">{=date}</p>
+            </div>
+            <div class="post-content">{=content}</div>
+            
+            <!-- 포스트 하단 네비게이션 -->
+            <div class="post-navigation">
+                <a href="{=prev_post_url}" class="prev-post">← 이전 글</a>
+                <a href="{=next_post_url}" class="next-post">다음 글 →</a>
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+</html>
