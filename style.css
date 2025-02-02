@@ -321,70 +321,177 @@ body {
 }
 
 /* 반응형 디자인 */
-@media (max-width: 1400px) {
-    :root {
-        --max-content-width: 95%;
-        --content-padding: 1.5rem;
-    }
-
-    .minihome-container {
-        gap: 2rem;
-    }
+@media only screen and (max-width:1023px) {
+	#header_wrap #header_gnb #header-title a {
+		max-width:230px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+	}
+	.ads-wrap.side-short{
+		width:100%;
+		height:200px;
+	}
+	.ads-wrap.side-long{
+		width:100%;
+    height:250px;
+	}
+	#tt-body-category .h-entry .content-width,#tt-body-category .protected .content-width,#tt-body-search .h-entry .content-width,#tt-body-search .protected .content-width,#tt-body-tag .h-entry .content-width,#tt-body-tag .protected .content-width {
+		margin:0px;
+	}
+	.list_content {
+		cursor:pointer;
+		justify-content:center;
+		align-items:center;
+		max-height:unset !important;
+	}
+	.h-entry {
+		max-width:900px;
+		width:auto !important;
+		max-height:unset;
+		padding: 0 20px 0 24px;
+	}
+	.list_detail_wrap {
+		max-height:unset;
+		vertical-align:middle;
+	}
+	#comment-form {
+		width:unset !important
+	}
+	#comment ol>li {
+		padding:unset !important
+	}
+	.dropdown-content {
+		min-width:300px
+	}
+	#search-form{
+		display: none;
+	}
+	#sidebar-category{
+		display: none;
+	}
+	.paging-line{
+		display: block;
+	}
 }
 
-@media (max-width: 1200px) {
-    :root {
-        --content-padding: 1.2rem;
-    }
-
-    .minihome-container {
-        gap: 1.5rem;
-    }
+@media only screen and (min-width: 450px){
+	.list_detail_wrap .post_text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+		background: -webkit-linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	}
 }
 
-@media (max-width: 860px) {
-    .minihome-container {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-
-    .minihome-sidebar {
-        display: none;
-    }
-
-    .minihome-content {
-        padding: 1.5rem;
-    }
-
-    .post-title {
-        font-size: 1.6rem;
-    }
-
-    .header-content {
-        padding: 0 1rem;
-    }
+@media only screen and (min-width:1023px) {
+	#main.sidebarPosition.left {
+		display:flex;
+		flex-direction:row-reverse;
+		margin:20px;
+		padding-left: 0px;
+	}
+	#main.sidebarPosition.right {
+		display:flex;
+		margin:20px;
+		padding-left: 10px;
+	}
+	#header_wrap #header_gnb #header-title {
+		padding-left:30px;
+	}
+	.hd .sub-info .wide-button-wrap {
+		display:inline-block;
+	}
+	.h-entry .content-width {
+    max-width: 810px;
+    margin: 0 auto;
+	}
+	.h-entry .content-width.wide{
+		max-width: 1200px;
+	}
+	#search-form{
+   display: block;
+	}
+	#sidebar-category{
+   display: block;
+	}
 }
 
-@media (max-width: 480px) {
-    :root {
-        --content-padding: 0.8rem;
-    }
+@media only screen and (max-width:600px) {
+	.popup-word {
+		width:50%;
+	}
+	#footer {
+		text-align:center;
+		flex-direction:column;
+	}
+	#footer .ft-ac {
+		position:inherit;
+	}
+	#search-bar{
+		margin: auto 5px;
+		background-color: transparent;
+	}
+	#search-bar .input-text{
+		display: none;
+	}
+}
 
-    .minihome-container {
-        padding: 0 var(--content-padding);
-    }
-
-    .minihome-content {
-        padding: 1rem;
-    }
-
-    .post-content {
-        font-size: 1rem;
-    }
-
-    .post-title {
-        font-size: 1.4rem;
-    }
+@media only screen and (max-width:1023px) {
+	.dropdown-content ul li:first-child {
+		display:block;
+	}
+	.dropdown-content .tt_category li {
+		padding:0px;
+	}
+	#tt-search {
+		position:initial !important;
+		left:initial !important;
+		top:initial !important;
+		width:100%;
+		display:none !important
+	}
+	#tt-search input {
+		color:#333 !important
+	}
+	#tt-search input::placeholder {
+		color:#333 !important
+	}
+	#sidebar {
+		margin:0px !important;
+		padding:20px 20px 20px 10px;
+		max-width:none !important;
+	}
+	#taglog {
+		margin:0px !important;
+		padding:0 20px 0 24px;
+		max-width:none !important;
+	}
+	#guestbook {
+		margin:0px !important;
+		padding:0 20px 0 24px;
+		max-width:none !important;
+	}
+	#no-search-results {
+		margin:0px !important;
+		padding:0px 20px 0px 20px;
+		max-width:none !important;
+		min-width:280px;
+	}
+	.module {
+		width:unset !important;
+		max-width:unset !important
+	}
+	#btn_goCategory {
+		display:block !important
+	}
+	#container nav ul li{
+		padding-left: 5px;
+	}
 }
 
 /* 추가: 링크 스타일 */
@@ -649,5 +756,4 @@ a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-blue);
-}
 }
