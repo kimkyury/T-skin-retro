@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta property="og:title" content="[##_article_title_##]" />
+    <meta property="og:description" content="[##_article_rep_desc_##]" />
+    <meta property="og:image" content="[##_article_thumbnail_##]" />
+    <meta property="og:url" content="[##_permalink_##]" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="[##_article_title_##]" />
+    <meta name="twitter:description" content="[##_article_rep_desc_##]" />
+    <meta name="twitter:image" content="[##_article_thumbnail_##]" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="[##_page_title_##] :: [##_title_##]" />
+    <meta name="description" content="[##_desc_##]" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <!-- <meta content='#cca567' name='theme-color' /> -->
+    <!-- <meta content='#cca567' name='msapplication-navbutton-color' /> -->
+    <title>[##_page_title_##]</title>
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="[##_title_##]"
+      href="[##_rss_url_##]"
+    />
+    <link rel="shortcut icon" href="[##_blog_link_##]favicon.ico" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined&display=swap"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=[##_var_mainFont_##]:wght@400&display=swap"
+    />
+    <link rel="preload" as="style" href="./style.css" />
+    <link rel="preload" as="style" href="./style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=[##_var_mainFont_##]:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style2.css" />
+
+    <script>
+      window.jQuery = tjQuery;
+      function loadStylesheet(b) {
+        return new Promise(function (c, d) {
+          var a = document.createElement("link");
+          a.rel = "stylesheet";
+          a.href = b;
+          a.addEventListener("load", c);
+          a.addEventListener("error", d);
+          document.head.appendChild(a);
+        });
+      }
+      function loadScript(b) {
+        return new Promise(function (c, d) {
+          var a = document.createElement("script");
+          a.src = b;
+          a.addEventListener("load", c);
+          a.addEventListener("error", d);
+          document.head.appendChild(a);
+        });
+      }
+    </script>
+    <style>
+      <s_if_var_mainFont>:root {
+          --main-font: "[##_var_mainFont_##]";
+      }
+
+      body,
+      html {
+          font-family: "[##_var_mainFont_##]", system-ui, -apple-system, BlinkMacSystemFont;
+      }
+      </s_if_var_mainFont>
+
+      <s_if_var_mainColor>:root {
+          --main-color: [##_var_mainColor_##];
+          --color-alpha-90: [##_var_mainColor_##]E6;
+          --color-alpha-80: [##_var_mainColor_##]CC;
+          --color-alpha-70: [##_var_mainColor_##]B3;
+      }
+      body,
+      html {
+          color: [##_var_mainColor_##];
+      }
+
+      </s_if_var_mainColor>
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+  </head>
+
+  <body id="[##_body_id_##]" class="no_scroll">
+    <s_t3>
+      <header>
+        <div id="header_wrap">
+          <div id="header_gnb">
+            <div id="header-title">
+              <a href="[##_blog_link_##]">[##_title_##]</a>
+            </div>
+
+            <div id="search-bar">
+              <button
+                class="search-icon"
+                aria-label="search icon"
+                onclick="if (window.getComputedStyle(document.getElementById('search-input')).display != 'none') {  window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value = '';} else { document.getElementById('search-bar').classList.add('active'); document.getElementById('search-input').focus();}"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 23 23"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-svg="search-icon"
+                >
+                  <circle
+                    fill="none"
+                    stroke="#666"
+                    stroke-width="1.5"
+                    cx="11"
+                    cy="11"
+                    r="8"
+                  ></circle>
+                  <path
+                    fill="none"
+                    stroke="#4682B4"
+                    stroke-width="1.8"
+                    d="M23,23 L20,20 L19.2,19.2"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                class="input-text"
+                type="text"
+                name="search"
+                value=""
+                id="search-input"
+                onkeypress="if (event.keyCode==13) { try {window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value = '';	return false;} catch (e) {} }"
+                placeholder="키워드를 입력하세요."
+              />
+              <button
+                class="search-close-icon"
+                onclick="document.getElementById('search-bar').classList.remove('active')"
+              >
+                x
+              </button>
+            </div>
+            <button class="header-subscribe-btn">
+              <span>구독</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- 배경 데코레이션 -->
+      <div class="retro-background">
+        <div class="retro-stars"></div>
+      </div>
+
+      <!-- 미니홈피 컨테이너 -->
+      <div class="minihome-container">
+        <aside id="sidebar" class="[##_var_sidebarPosition_##]">
+          <s_sidebar>
+            <s_sidebar_element>
+              <div class="profile-section">
+                <div class="profile-frame">
+                  <a href="[##_blog_link_##]">
+                    <img
+                      src="[##_image_##]"
+                      alt="프로필 이미지"
+                      class="profile-img"
+                    />
+                  </a>
+                </div>
+                <h2 class="profile-name">[##_title_##]</h2>
+
+                <p class="profile-status">⭐ kkk ⭐</p>
+              </div>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <!-- 공지사항 -->
+              <div class="module module-notice">
+                <a href="/notice" class="menu-item">
+                  <img src="./images/home.png" alt="공지사항 아이콘" />
+                  <div class="module-title">
+                    <span>공지사항</span>
+                  </div>
+                </a>
+                <div class="module-content">
+                  <s_rct_notice>
+                    <ul id="module-notice-ul">
+                      <s_rct_notice_rep>
+                        <li class="notice-list">
+                          <a href="[##_notice_rep_link_##]"
+                            >[##_notice_rep_title_##]</a
+                          >
+                        </li>
+                      </s_rct_notice_rep>
+                    </ul>
+                  </s_rct_notice>
+                </div>
+              </div>
+            </s_sidebar_element>
+
+            <!-- 방명록 -->
+            <s_sidebar_element>
+              <div>
+                <a href="/guestbook" class="menu-item">
+                  <img src="./images/guestbook.png" alt="방명록 아이콘" />
+                  <span>방명록</span>
+                </a>
+              </div>
+            </s_sidebar_element>
+
+            <!-- 카테고리 -->
+            <s_sidebar_element>
+              <!-- 카테고리 -->
+              <div class="module module-category" id="sidebar-category">
+                <a href="/category">
+                  <div class="module-title">
+                    <span>전체 카테고리</span>
+                  </div>
+                </a>
+                <div class="module-content tt-cate">[##_category_list_##]</div>
+              </div>
+            </s_sidebar_element>
+
+            <!-- 통계 -->
+            <s_sidebar_element>
+              <!-- 카운터 -->
+              <div class="module module-visitor">
+                <div class="module-title">
+                  <span>전체 방문자</span>
+                </div>
+                <div class="module-content visitor">
+                  <div class="visitor-row">
+                    <span class="visitor-cell">오늘</span>
+                    <span class="ff-h today visitor-date"
+                      >[##_count_today_##]</span
+                    >
+                  </div>
+                  <div class="visitor-row">
+                    <span class="visitor-cell">어제</span>
+                    <span class="ff-h yesterday visitor-date"
+                      >[##_count_yesterday_##]</span
+                    >
+                  </div>
+                  <div class="visitor-row">
+                    <span class="visitor-cell">전체</span>
+                    <span class="ff-h total visitor-date"
+                      >[##_count_total_##]</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </s_sidebar_element>
+          </s_sidebar>
+        </aside>
+
+
+        <div id="warp">
+            <div id="container">
+                <nav id=""gnb">
+                     <div class="header-blog-menu">
+                        <s_if_var_enableMenu>
+                            
+                        [##_blog_menu_##]
+                        </s_if_var_enableMenu>
+                    </div>
+
+                    <s_if_var_adsenseClientId>
+                        <s_if_var_adsArticleTop>
+                            <div class=""ads-wrap article-top">
+                                <ins
+                    class="adsbygoogle"
+                    style="display: block"
+                    data-ad-client="[##_var_adsenseClientId_##]"
+                    data-ad-slot="[##_var_adsArticleTop_##]"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"
+                  >
+                  </ins>
+
+                  <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+
+                                </div>
+                            
+                            </s_if_var_adsArticleTop>
+                        
+                        </s_if_var_adsenseClientId>
+
+                </nav>
+
+                
+            </div>    
+        </div>
+
+        <!-- 메인 콘텐츠 -->
+        <main class="minihome-content">
+          <s_article_rep>
+            <!-- 글 목록 페이지 -->
+            <s_index_article_rep>
+              <div class="post-list">
+                <div class="post-item">
+                  <h2 class="post-item-title">
+                    <a href="[##_article_link_##]">[##_article_title_##]</a>
+                  </h2>
+                  <div class="post-item-meta">
+                    <span>📅 [##_article_date_##]</span>
+                    <span>📂 [##_article_category_##]</span>
+                  </div>
+                  <div class="post-excerpt">
+                    [##_article_rep_desc_##]
+                    <!-- 게시글 요약 -->
+                  </div>
+                </div>
+              </div>
+            </s_index_article_rep>
+
+            <s_permalink_article_rep>
+              <div class="content-header">
+                <h1 class="post-title">[##_article_title_##]</h1>
+                <div class="post-meta">
+                  <span class="post-date">📅 [##_article_date_##]</span>
+                  <span class="post-category">📂 [##_article_category_##]</span>
+                  <span class="post-author">✍ [##_article_author_##]</span>
+                </div>
+              </div>
+
+              <div class="post-content">
+                [##_article_rep_##]
+                <!-- 게시글 본문 -->
+              </div>
+
+              <div class="post-tags">🏷 태그: [##_tag_list_##]</div>
+
+              <div class="post-footer">
+                <div class="post-stats">
+                  <button class="like-button">
+                    ❤️ 좋아요 <span>[##_article_recommend_##]</span>
+                  </button>
+                </div>
+
+                <!-- 포스트 네비게이션 -->
+                <div class="post-navigation">
+                  <a href="[##_article_prev_link_##]" class="prev-post"
+                    >← 이전 글: [##_article_prev_##]</a
+                  >
+                  <a href="[##_article_next_link_##]" class="next-post"
+                    >다음 글 → [##_article_next_##]</a
+                  >
+                </div>
+              </div>
+            </s_permalink_article_rep>
+          </s_article_rep>
+        </main>
+      </div>
+    </s_t3>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".fixed-header");
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            // 100px 이상 스크롤 시
+            if (window.scrollY < lastScrollY) {
+              // 위로 스크롤
+              header.classList.add("visible");
+            } else {
+              // 아래로 스크롤
+              header.classList.remove("visible");
+            }
+          } else {
+            header.classList.remove("visible");
+          }
+
+          lastScrollY = window.scrollY;
+        });
+      });
+    </script>
+  </body>
+</html>
