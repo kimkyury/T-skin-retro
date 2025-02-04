@@ -89,47 +89,53 @@
         <div>구독</div>
       </header>
 
-      <s_sidebar>
-        좌측 사이드바 영역
-        <s_sidebar_element> 공지사항 </s_sidebar_element>
-        <s_sidebar_element> 카테고리 </s_sidebar_element>
-        <s_sidebar_element> 방문자수 </s_sidebar_element>
-      </s_sidebar>
+      <div class="container">
+        <div class="sidebar">
+          <s_sidebar>
+            <s_sidebar_element>
+              <div class="profile">프로필 영역</div>
+            </s_sidebar_element>
+            좌측 사이드바 영역
+            <s_sidebar_element> 공지사항 </s_sidebar_element>
+            <s_sidebar_element> 카테고리 </s_sidebar_element>
+            <s_sidebar_element> 방문자수 </s_sidebar_element>
+          </s_sidebar>
+        </div>
+        <main class="content">
+          메인 포스팅글 영역1
 
-      <main>
-        메인 포스팅글 영역1
+          <nav>본문 타이틀 영역</nav>
 
-        <nav>본문 타이틀 영역</nav>
-
-        <!-- 포스트 목록-->
-        <s_article_rep>
-          <div>
-            <h2>
-              <!-- 개별 포스트 링크-->
-              <a href="[##_article_rep_link_##]">
-                [##_article_rep_title_##]
-                <div>
-                  <!-- 썸네일-->
-                  <s_article_rep_thumnail> </s_article_rep_thumnail>
-                </div>
-                <!-- 제목과 내용-->
-                <div>
-                  <h3>[##_article_rep_title_##]</h3>
-                  <p class="article_summary">[##_article_rep_summary_##]</p>
-                </div>
-              </a>
-            </h2>
-            <div class="category">
-              <a href="[##_article_rep_category_link_##]">
-                [##_article_rep_category_##]
-              </a>
+          <!-- 포스트 목록-->
+          <s_article_rep>
+            <div>
+              <h2>
+                <!-- 개별 포스트 링크-->
+                <a href="[##_article_rep_link_##]">
+                  [##_article_rep_title_##]
+                  <div>
+                    <!-- 썸네일-->
+                    <s_article_rep_thumnail> </s_article_rep_thumnail>
+                  </div>
+                  <!-- 제목과 내용-->
+                  <div>
+                    <h3>[##_article_rep_title_##]</h3>
+                    <p class="article_summary">[##_article_rep_summary_##]</p>
+                  </div>
+                </a>
+              </h2>
+              <div class="category">
+                <a href="[##_article_rep_category_link_##]">
+                  [##_article_rep_category_##]
+                </a>
+              </div>
+              <div>[##_article_rep_date_##]</div>
             </div>
-            <div>[##_article_rep_date_##]</div>
-          </div>
-        </s_article_rep>
+          </s_article_rep>
 
-        <div>아티클 영역</div>
-      </main>
+          <div>아티클 영역</div>
+        </main>
+      </div>
 
       <footer>푸터</footer>
     </s_t3>

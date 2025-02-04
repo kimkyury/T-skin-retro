@@ -56,6 +56,7 @@ div,
   margin-right: auto;
 }
 
+/* 검색란 */
 #search {
   padding: 5px 10px;
   margin: 0 10px 3px 10px;
@@ -79,12 +80,55 @@ div,
   padding-bottom: 2px;
 }
 
+.search_icon {
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 .article_summary {
   position: relative;
   font-size: 15px;
   max-height: 46px; /* 최대 표시 높이 */
   overflow: hidden;
   text-overflow: ellipsis; /* 넘치는 텍스트 (...) 표시 */
+}
+
+.container {
+  max-width: var(--max-content-width);
+  margin: calc(var(--header-height) + 2rem) auto 3rem;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  /* 사이드바 고정 너비 */
+  gap: 3rem;
+  padding: 0 var(--content-padding);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  max-width: 100%;
+  /* 최대 너비 설정 */
+}
+
+.sidebar {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: var(--sidebar-width);
+  top: calc(var(--header-height) + 1rem);
+  position: sticky;
+  height: fit-content;
+}
+
+.profile {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
 }
 
 /* 탭 */
