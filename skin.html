@@ -37,107 +37,76 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body>
+  <body id="p##_body_id_##">
     <s_t3>
       <header id="top_nav">
-        <!-- 블로그명-->
         <div id="top_title">
           <a href="[##_blog_link_##]">[##_title_##]</a>
         </div>
-
-        <!-- 검색-->
         <div id="search">
-          <input
-            id="search-input"
-            type="text"
-            name="search"
-            value=""
-            onkeypress="if (event.keyCode==13) { try {window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value = '';	return false;} catch (e) {} }"
-            placeholder="검색어를 입력하세요"
-          />
+          <input type="text" placeholder="검색어 입력" />
           <button
-            class="search-icon"
-            aria-label="search icon"
-            onclick="if (window.getComputedStyle(document.getElementById('search-input')).display != 'none') {  window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value = '';} else { document.getElementById('search-bar').classList.add('active'); document.getElementById('search-input').focus();}"
+            class="search-close-icon"
+            onclick="document.getElementById('search').classList.remove('active')"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 25 25"
-              xmlns="http://www.w3.org/2000/svg"
-              data-svg="search-icon"
-            >
-              <circle
-                fill="none"
-                stroke="#666"
-                stroke-width="1.5"
-                cx="10"
-                cy="12"
-                r="8"
-              ></circle>
-              <path
-                fill="none"
-                stroke="#4682B4"
-                stroke-width="1.8"
-                d="M23,23 L20,20 L19.2,19.2"
-              ></path>
-            </svg>
+            X
+          </button>
+          <button
+            type="text"
+            onclick="if (window.getComputedStyle(document.getElementById('search')).display != 'none') {  window.location.href = '/search' + '/' + looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value = '';} else { document.getElementById('search-bar').classList.add('active'); document.getElementById('search-input').focus();}"
+          >
+            🔍
           </button>
         </div>
-
-        <!-- 구독-->
-        <div>구독</div>
+        <div id="subscribe">
+          <!--아직 CSS 만듦-->
+          구독
+        </div>
       </header>
 
       <div class="container">
-        <div class="sidebar">
+        <aside class="sidebar">
           <s_sidebar>
             <s_sidebar_element>
               <div class="profile">프로필 영역</div>
+
+              <!-- 공지사항-->
+              <nav class="sidebar_notice">
+                <h3>공지사항</h3>
+                <s_rct_notice>
+                  <ul>
+                    <s_rct_notice_rep>
+                      <li>
+                        <a href="[##_notice_rep_link_##]">
+                          [##_notice_rep_title_##]
+                        </a>
+                      </li>
+                    </s_rct_notice_rep>
+                  </ul>
+                </s_rct_notice>
+              </nav>
             </s_sidebar_element>
-            좌측 사이드바 영역
-            <s_sidebar_element> 공지사항 </s_sidebar_element>
-            <s_sidebar_element> 카테고리 </s_sidebar_element>
-            <s_sidebar_element> 방문자수 </s_sidebar_element>
           </s_sidebar>
-        </div>
+        </aside>
+
         <main class="content">
-          메인 포스팅글 영역1
-
-          <nav>본문 타이틀 영역</nav>
-
-          <!-- 포스트 목록-->
+          [##_revenue_list_upper_##]
           <s_article_rep>
-            <div>
-              <h2>
-                <!-- 개별 포스트 링크-->
-                <a href="[##_article_rep_link_##]">
-                  [##_article_rep_title_##]
-                  <div>
-                    <!-- 썸네일-->
-                    <s_article_rep_thumnail> </s_article_rep_thumnail>
-                  </div>
-                  <!-- 제목과 내용-->
-                  <div>
-                    <h3>[##_article_rep_title_##]</h3>
-                    <p class="article_summary">[##_article_rep_summary_##]</p>
-                  </div>
-                </a>
-              </h2>
-              <div class="category">
-                <a href="[##_article_rep_category_link_##]">
-                  [##_article_rep_category_##]
-                </a>
-              </div>
-              <div>[##_article_rep_date_##]</div>
-            </div>
-          </s_article_rep>
+            <s_index_article_rep>
+              <a href="[##_article_rep_link_##]">
+                <s_article_rep_thumbnail>
+                  <img />
+                </s_article_rep_thumbnail>
 
-          <div>아티클 영역</div>
+                <h3>[##_article_rep_title_##]</h3>
+                <p class="article_summary">[##_article_rep_summary_##]</p>
+              </a>
+            </s_index_article_rep>
+          </s_article_rep>
         </main>
       </div>
 
-      <footer>푸터</footer>
+      <footer>© 2024 - 블로그 이름</footer>
     </s_t3>
   </body>
 </html>
