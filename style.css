@@ -5,7 +5,7 @@
   --text-color: #1c1c1e; /* 기본 글씨 색 */
   --text-light: #8e8e93; /* 연한 글씨 색 */
   --border-light: rgba(0, 0, 0, 0.1); /* 경계선 색 */
-  --max-content-width: 1200px;
+  --max-content-width: 1760px;
   --header-height: 64px;
   --sidebar-width: 280px;
   --content-padding: 2rem;
@@ -116,11 +116,25 @@ body {
   font-weight: 500;
 }
 
+.sidebar .sidebar_element {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.sidebar_title {
+  font-weight: 600;
+  line-height: 10px;
+  /* padding: 8px 10px 15px 15px; */
+  margin-bottom: 10px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
 .sidebar img {
   width: 18px;
   height: 18px;
   object-fit: contain;
   vertical-align: middle;
+  margin-bottom: 15px;
 }
 
 /* 프로필 */
@@ -132,7 +146,6 @@ body {
 .sidebar_profile h2 {
   display: block;
   width: 100%;
-  margin-bottom: 0.5rem;
   color: var(--text-color);
 }
 
@@ -163,7 +176,7 @@ body {
   transition: 0.3s;
 }
 
-.sidebar_notice ul li a {
+.sidebar_notice ul li {
   text-decoration: none;
   color: var(--text-color);
   font-size: 15px;
@@ -185,18 +198,21 @@ body {
 }
 
 .content h2 {
+  padding: 10px;
   font-size: 20px;
   font-weight: 600;
   color: var(--text-color);
 }
 
-.content h3 {
-  font-size: 18px;
+.content {
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-color);
+  margin-bottom: 0.2rem;
 }
 
 .article_summary {
+  text-decoration: none;
   font-size: 12px;
   color: var(--text-color);
   line-height: 1.5;
@@ -221,6 +237,11 @@ footer {
 
   .sidebar {
     display: none;
+  }
+
+  .sidebar_element {
+    width: unset !important;
+    max-width: unset !important;
   }
 }
 

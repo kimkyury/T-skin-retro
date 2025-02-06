@@ -68,49 +68,56 @@
         <aside class="sidebar">
           <s_sidebar>
             <s_sidebar_element>
-            <div class="sidebar_profile">
-              <div class="profile_frame">
-                <a href ="[##_blog_link_##]">
-                  <img
-                  src="[##_image_##]"
-                  alt="프로필 이미지"
-                  class="profile-img"
-                  />
-                </a/>
+              <div class="sidebar_profile">
+                <div class="profile_frame">
+                  <a href="[##_blog_link_##]">
+                    <img
+                      src="[##_image_##]"
+                      alt="프로필 이미지"
+                      class="profile-img"
+                    />
+                  </a>
+                </div>
+                <h2>[##_title_##]</h2>
               </div>
-              <h2> [##_title_##] </h2>
-            </div>
-
-            </s_sidebar_element>            
+            </s_sidebar_element>
             <s_sidebar_element>
               <!-- 공지사항-->
-              <nav class="sidebar_notice">
-                <a href="/notice">
-                  <img src="./images/home.png" alt="공지사항 아이콘" />
-                  <h3>공지사항</h3>
-                </a>
-                <s_rct_notice>
-                  <ul>
-                    <s_rct_notice_rep>
-                      <li>
-                        <a href="[##_notice_rep_link_##]">                        
-                          [##_notice_rep_title_##]
-                        </a>
-                      </li>
-                    </s_rct_notice_rep>
-                  </ul>
-                </s_rct_notice>
-              </nav>
+              <div class="sidebar_element">
+                <nav class="sidebar_notice">
+                  <a href="/notice">
+                    <img src="./images/home.png" alt="공지사항 아이콘" />
+                    <div class="sidebar_title">
+                      <span>공지사항</span>
+                    </div>
+                  </a>
+                  <s_rct_notice>
+                    <ul>
+                      <s_rct_notice_rep>
+                        <li>
+                          <a href="[##_notice_rep_link_##]">
+                            [##_notice_rep_title_##]
+                          </a>
+                        </li>
+                      </s_rct_notice_rep>
+                    </ul>
+                  </s_rct_notice>
+                </nav>
+              </div>
             </s_sidebar_element>
             <s_sidebar_element>
               <!-- 카테고리 -->
-              <nav class="sidebar_category">
-                <a href="/category">
-                  <img src="./images/diary.png" alt="카테고리 아이콘"/>
-                  <h3> 카테고리 </h3>
-                </a>
-              </nav>
-
+              <div class="sidebar_element">
+                <nav class="sidebar_category">
+                  <a href="/category">
+                    <img src="./images/diary.png" alt="카테고리 아이콘" />
+                    <div class="sidebar_title">
+                      <span> 카테고리 </span>
+                    </div>
+                  </a>
+                  <div>[##_category_list_##]</div>
+                </nav>
+              </div>
             </s_sidebar_element>
           </s_sidebar>
         </aside>
