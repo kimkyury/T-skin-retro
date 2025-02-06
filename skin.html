@@ -68,16 +68,32 @@
         <aside class="sidebar">
           <s_sidebar>
             <s_sidebar_element>
-              <div class="profile">프로필 영역</div>
+            <div class="sidebar_profile">
+              <div class="profile_frame">
+                <a href ="[##_blog_link_##]">
+                  <img
+                  src="[##_image_##]"
+                  alt="프로필 이미지"
+                  class="profile-img"
+                  />
+                </a/>
+              </div>
+              <h2> [##_title_##] </h2>
+            </div>
 
+            </s_sidebar_element>            
+            <s_sidebar_element>
               <!-- 공지사항-->
               <nav class="sidebar_notice">
-                <h3>공지사항</h3>
+                <a href="/notice">
+                  <img src="./images/home.png" alt="공지사항 아이콘" />
+                  <h3>공지사항</h3>
+                </a>
                 <s_rct_notice>
                   <ul>
                     <s_rct_notice_rep>
                       <li>
-                        <a href="[##_notice_rep_link_##]">
+                        <a href="[##_notice_rep_link_##]">                        
                           [##_notice_rep_title_##]
                         </a>
                       </li>
@@ -85,6 +101,16 @@
                   </ul>
                 </s_rct_notice>
               </nav>
+            </s_sidebar_element>
+            <s_sidebar_element>
+              <!-- 카테고리 -->
+              <nav class="sidebar_category">
+                <a href="/category">
+                  <img src="./images/diary.png" alt="카테고리 아이콘"/>
+                  <h3> 카테고리 </h3>
+                </a>
+              </nav>
+
             </s_sidebar_element>
           </s_sidebar>
         </aside>
