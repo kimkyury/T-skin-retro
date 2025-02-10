@@ -119,6 +119,34 @@
                 </nav>
               </div>
             </s_sidebar_element>
+
+            <s_sidebar_element>
+              <!-- 방문자수 -->
+              <div class="sidebar_element">
+                <a href="[##_blog_link_##]">
+                  <img src="./images/statistics.png" alt="방문자수 아이콘" />
+                  <div class="sidebar_title">
+                    <span> 방문자수</span>
+                  </div>
+                </a>
+              </div>
+              <div class="statistics">
+                <div>
+                  <span class="statistics_title"> 오늘</span>
+                  <span class="statistics_cnt"> [##_count_today_##]</span>
+                </div>
+
+                <div>
+                  <span class="statistics_title"> 어제</span>
+                  <span class="statistics_cnt"> [##_count_yesterday_##]</span>
+                </div>
+
+                <div>
+                  <span class="statistics_title"> 전체 </span>
+                  <span class="statistics_cnt"> [##_count_total_##]</span>
+                </div>
+              </div>
+            </s_sidebar_element>
           </s_sidebar>
         </aside>
 
@@ -128,13 +156,61 @@
             <s_index_article_rep>
               <a href="[##_article_rep_link_##]">
                 <s_article_rep_thumbnail>
-                  <img />
+                  <img
+                    width="100"
+                    weight="120"
+                    src="//i1.daumcdn.net/thumb/C120x120/?fname=[##_article_rep_thumbnail_raw_url_##]"
+                    alt="[##_article_rep_title_##]"
+                  />
                 </s_article_rep_thumbnail>
 
                 <h3>[##_article_rep_title_##]</h3>
                 <p class="article_summary">[##_article_rep_summary_##]</p>
               </a>
+              <ul>
+                <!-- category -->
+                <li>
+                  <span> [##_article_rep_category_##] </span>
+                </li>
+                <!-- date -->
+                <li>[##_article_rep_simple_date_##]</li>
+                <!-- comment -->
+                <li>
+                  <s_rp_count> [##_article_rep_rep_cnt_##] </s_rp_count>
+                </li>
+              </ul>
             </s_index_article_rep>
+
+            <!-- 아티클 본문 -->
+            <s_permalink_article_rep>
+              <div>
+                <span>
+                  <a href="[##_article_Rep_category_link_##]">
+                    [##_article_rep_category_##]
+                  </a>
+                  [##_rctps_rep_stimple_date_##]
+                </span>
+
+                <!-- 관리자용 -->
+                <s_ad_div>
+                  <span>
+                    <a href="[##_s_ad_m_link_##]"> 수정 </a>
+                  </span>
+                  <span>
+                    <a href="#" onclick="[##_ad_s2_onclick_##]">
+                      [##_s_ad_s1_label_##]
+                    </a>
+                  </span>
+                </s_ad_div>
+              </div>
+
+              <!-- 본문 제목 -->
+              <h1>[##_article_Rep_title_##]</h1>
+              <div>[##_article_rep_desc_##]</div>
+
+              <!-- 같은 카테고리 글 목록-->
+              <s_article_related> </s_article_related>
+            </s_permalink_article_rep>
           </s_article_rep>
         </main>
       </div>
