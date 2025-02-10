@@ -259,6 +259,23 @@ footer {
   box-shadow: 0 -2px 8px var(--border-light);
 }
 
+.article-list {
+  cursor: pointer; /* 클릭 가능*/
+  justify-content: center;
+  align-items: center;
+  max-height: 300px;
+}
+
+.article-list-element {
+  position: relative;
+  background-color: inherit;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  border-radius: 7px;
+}
+
 /* 📌 반응형 개선 */
 @media only screen and (max-width: 1024px) {
   .container {
