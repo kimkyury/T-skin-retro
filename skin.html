@@ -191,10 +191,10 @@
             <s_permalink_article_rep>
               <div>
                 <span>
-                  <a href="[##_article_Rep_category_link_##]">
+                  <a href="[##_article_ep_category_link_##]">
                     [##_article_rep_category_##]
                   </a>
-                  [##_rctps_rep_stimple_date_##]
+                  [##_rctps_rep_simple_date_##]
                 </span>
 
                 <!-- 관리자용 -->
@@ -211,11 +211,18 @@
               </div>
 
               <!-- 본문 제목 -->
-              <h1>[##_article_Rep_title_##]</h1>
-              <div>[##_article_rep_desc_##]</div>
+              <h1 class="article_main_title">[##_article_rep_title_##]</h1>
+              <div class="article_main_content">[##_article_rep_desc_##]</div>
 
               <!-- 같은 카테고리 글 목록-->
-              <s_article_related> </s_article_related>
+              <s_article_related>
+                <div class="related_category">
+                  [##_article_rep_category_##] 카테고리 내 다른 글
+                </div>
+                <div class="related_category_more">
+                  <a href="[##_article_rep_category_link_##]"> 더 보기 </a>
+                </div>
+              </s_article_related>
             </s_permalink_article_rep>
           </s_article_rep>
         </main>
