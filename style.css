@@ -277,16 +277,52 @@ footer {
 }
 
 .article_main_title {
-  display: inline-block;
-  font-size: 1.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.5rem;
 }
 
-.article_main_title {
-  max-width: 100%;
+.article_main_content {
   font-size: 16px;
-  margin-top: 20px;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.s_article_related {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px var(--border-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.related_category {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.related_category_more a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.related_category_more a:hover {
+  background: var(--primary-color);
+  color: #fff;
 }
 
 /* 📌 반응형 개선 */
